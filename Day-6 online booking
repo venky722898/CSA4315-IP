@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Ticket Booking System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        form input, form select, form textarea, form button {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Bus Ticket Booking System</h1>
+    </header>
+    <nav>
+        <a href="#search">Search Buses</a>
+        <a href="#user-dashboard">User Dashboard</a>
+        <a href="#admin-panel">Admin Panel</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Search Buses Section -->
+        <section id="search">
+            <h2>Search Buses</h2>
+            <form id="searchForm">
+                <input type="text" placeholder="From (Origin)" name="origin" required>
+                <input type="text" placeholder="To (Destination)" name="destination" required>
+                <input type="date" name="journeyDate" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="bus-results">
+                <p>Search results will appear here.</p>
+            </div>
+        </section>
+        <!-- User Dashboard Section -->
+        <section id="user-dashboard">
+            <h2>User Dashboard</h2>
+            <!-- User Registration -->
+            <div>
+                <h3>Register</h3>
+                <form id="registerForm">
+                    <input type="text" placeholder="Full Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <!-- User Login -->
+            <div>
+                <h3>Login</h3>
+                <form id="loginForm">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <!-- Booking History -->
+            <div>
+                <h3>Booking History</h3>
+                <p>Your previous bookings will appear here.</p>
+            </div>
+            <!-- Cancel Ticket -->
+            <div>
+                <h3>Cancel Ticket</h3>
+                <form id="cancelForm">
+                    <input type="text" placeholder="Enter Booking ID" name="bookingId" required>
+                    <button type="submit">Cancel Ticket</button>
+                </form>
+            </div>
+            <!-- Post Comments -->
+            <div>
+                <h3>Post Comments</h3>
+                <form id="commentForm">
+                    <textarea placeholder="Write your comment..." name="comment" required></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </section>
+        <!-- Admin Panel Section -->
+        <section id="admin-panel">
+            <h2>Admin Panel</h2>
+            <div>
+                <h3>Admin Login</h3>
+                <form id="adminLoginForm">
+                    <input type="email" placeholder="Admin Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div>
+                <h3>Manage Buses</h3>
+                <button>Add Bus</button>
+                <button>Update/Delete Bus</button>
+                <button>View Reports</button>
+            </div>
+            <div>
+                <h3>Manage Users</h3>
+                <button>View Registered Users</button>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <textarea placeholder="Your message..." name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Bus Ticket Booking System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
