@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotel Booking</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        form {
+            margin: 1rem 0;
+        }
+        form input, form select, form textarea, form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form input, form select, form textarea, form button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Hotel Booking</h1>
+    </header>
+    <nav>
+        <a href="#search">Search Hotels</a>
+        <a href="#user">User Dashboard</a>
+        <a href="#admin">Admin Panel</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Search Hotels Section -->
+        <section id="search">
+            <h2>Search Hotels</h2>
+            <form id="searchHotelsForm">
+                <input type="text" placeholder="Destination" name="destination" required>
+                <input type="date" placeholder="Check-in Date" name="checkin" required>
+                <input type="date" placeholder="Check-out Date" name="checkout" required>
+                <input type="number" placeholder="Number of Guests" name="guests" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="hotel-results">
+                <p>Search results will appear here.</p>
+            </div>
+        </section>
+        <!-- User Dashboard Section -->
+        <section id="user">
+            <h2>User Dashboard</h2>
+            <!-- User Registration -->
+            <div>
+                <h3>Register</h3>
+                <form id="registerForm">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <!-- User Login -->
+            <div>
+                <h3>Login</h3>
+                <form id="loginForm">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <!-- User Profile Management -->
+            <div>
+                <h3>Manage Profile</h3>
+                <form id="profileForm">
+                    <input type="text" placeholder="Update Name" name="updateName">
+                    <input type="email" placeholder="Update Email" name="updateEmail">
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+            <!-- Booking History -->
+            <div>
+                <h3>Booking History</h3>
+                <p>Your previous bookings will appear here.</p>
+            </div>
+        </section>
+        <!-- Admin Panel Section -->
+        <section id="admin">
+            <h2>Admin Panel</h2>
+            <div>
+                <h3>Admin Login</h3>
+                <form id="adminLoginForm">
+                    <input type="email" placeholder="Admin Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div>
+                <h3>Manage Hotels</h3>
+                <button>Add Hotel</button>
+                <button>Update/Delete Hotel</button>
+                <button>Manage Rooms</button>
+                <button>View Users</button>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <textarea placeholder="Your message..." name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Hotel Booking. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
