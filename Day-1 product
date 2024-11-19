@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE products [
+    <!ELEMENT products (product+)>
+    <!ELEMENT product (#PCDATA)>
+    <!ATTLIST product
+        partsno ID #REQUIRED
+        price CDATA "open">
+]>
+<products>
+    <product partsno="P001" price="29.99">Laptop</product>
+    <product partsno="P002" price="15.49">Mouse</product>
+    <product partsno="P003">Keyboard</product>
+</products>
