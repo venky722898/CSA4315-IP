@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Pass Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0066cc;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #004d99;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #004d99;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bus Pass Management System</h1>
+    </header>
+    <nav>
+        <a href="#user">User Section</a>
+        <a href="#conductor">Conductor Section</a>
+        <a href="#admin">Admin Section</a>
+    </nav>
+    <main>
+        <!-- User Section -->
+        <section id="user">
+            <h2>User Section</h2>
+            <button onclick="alert('Redirecting to Registration Page')">Register</button>
+            <button onclick="alert('Redirecting to Login Page')">Login</button>
+            <button onclick="alert('Adding Money to eWallet')">Add Money - eWallet</button>
+            <button onclick="alert('Buying Bus eTicket')">Buy Bus eTicket</button>
+            <button onclick="alert('Applying for New Bus Pass')">Apply New Bus Pass</button>
+            <button onclick="alert('Renewing Bus Pass')">Renew Bus Pass</button>
+            <button onclick="alert('Applying for Student/Route Pass')">Apply Student & Route Pass</button>
+            <button onclick="alert('Getting QR Code for Bus Pass')">Get QR Code</button>
+            <button onclick="alert('Calculating Expected Time to Reach')">Calculate Expected Time</button>
+        </section>
+
+        <!-- Conductor Section -->
+        <section id="conductor">
+            <h2>Conductor Section</h2>
+            <button onclick="alert('Redirecting to Conductor Login Page')">Login</button>
+            <button onclick="alert('Scanning QR Code')">Scan QR</button>
+            <button onclick="alert('Verifying Bus Pass ID')">Verify Bus Pass ID</button>
+            <button onclick="alert('Verifying Bus Ticket')">Verify Bus Ticket</button>
+            <button onclick="alert('Updating Bus Location')">Update Bus Location</button>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2>Admin Section</h2>
+            <button onclick="alert('Redirecting to Admin Login Page')">Login</button>
+            <button onclick="alert('Managing Student & Route Pass')">Manage Student & Route Pass</button>
+            <button onclick="alert('Managing Conductor Login')">Manage Conductor Login</button>
+            <button onclick="alert('Approving Bus Passes')">Approve Bus Pass</button>
+            <button onclick="alert('Generating QR Code')">Generate QR Code</button>
+            <button onclick="alert('Creating Bus Details')">Create Bus Details</button>
+            <button onclick="alert('Creating Route Information')">Create Route Information</button>
+        </section>
+    </main>
+</body>
+</html>
