@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteOnline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .candidate-list {
+            margin: 20px 0;
+        }
+        .candidate {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VoteOnline Platform</h1>
+    </header>
+    <main>
+        <h2>Cast Your Vote</h2>
+        <div id="voter-login">
+            <label for="voter-id">Voter ID:</label>
+            <input type="text" id="voter-id" placeholder="Enter your Voter ID">
+            <button onclick="sendOTP()">Get OTP</button>
+        </div>
+
+        <div id="otp-section" style="display: none;">
+            <label for="otp-code">Enter OTP:</label>
+            <input type="text" id="otp-code" placeholder="Enter OTP">
+            <button onclick="verifyOTP()">Verify</button>
+        </div>
+
+        <div id="candidate-section" style="display: none;">
+            <h3>Select Your Candidate</h3>
+            <div class="candidate-list" id="candidates"></div>
+            <button onclick="submitVote()">Submit Vote</button>
+        </div>
+
+        <div id="result-section" style="display: none;">
+            <h3>Thank you for voting!</h3>
+            <p>Your vote has been submitted successfully.</p>
+        </div>
+    </main>
+
+    <script>
+        const candidates = [
+            { id: 1, name: "Alice Johnson", party: "Democratic Alliance" },
+            { id: 2, name: "Bob Smith", party: "People's Party" },
+            { id: 3, name: "Catherine Lee", party: "Green Future" }
+        ];
+
+        function sendOTP() {
+            const voterID = document.getElementById("voter-id").value;
+            if (voterID) {
+                alert("OTP sent to registered mobile/email.");
+                document.getElementById("otp-section").style.display = "block";
+            } else {
+                alert("Please enter your Voter ID.");
+            }
+        }
+
+        function verifyOTP() {
+            const otp = document.getElementById("otp-code").value;
+            if (otp === "123456") { // Simulate correct OTP
+                alert("OTP Verified Successfully.");
+                showCandidates();
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        }
+
+        function showCandidates() {
+            document.getElementById("otp-section").style.display = "none";
+            document.getElementById("candidate-section").style.display = "block";
+
+            const candidateList = document.getElementById("candidates");
+            candidates.forEach(candidate => {
+                const candidateDiv = document.createElement("div");
+                candidateDiv.className = "candidate";
+                candidateDiv.innerHTML = `
+                    <input type="radio" name="candidate" value="${candidate.id}" id="candidate-${candidate.id}">
+                    <label for="candidate-${candidate.id}">
+                        ${candidate.name} - ${candidate.party}
+                    </label>
+                `;
+                candidateList.appendChild(candidateDiv);
+            });
+        }
+
+        function submitVote() {
+            const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+            if (selectedCandidate) {
+                const candidateID = selectedCandidate.value;
+                const candidate = candidates.find(c => c.id == candidateID);
+                alert(You voted for: ${candidate.name});
+                document.getElementById("candidate-section").style.display = "none";
+                document.getElementById("result-section").style.display = "block";
+            } else {
+                alert("Please select a candidate before submitting your vote.");
+            }
+        }
+    </script>
+</body>
+</html>
