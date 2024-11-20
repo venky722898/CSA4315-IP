@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Management Information System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #b71c1c;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d32f2f;
+        }
+        button {
+            padding: 10px 15px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blood Management Information System</h1>
+    </header>
+    <nav>
+        <a href="#donor">Donor Section</a>
+        <a href="#hospital">Hospital Section</a>
+    </nav>
+    <main>
+        <!-- Donor/User Section -->
+        <section id="donor">
+            <h2>Donor/User Section</h2>
+            <button onclick="alert('Redirecting to Login Page')">Login</button>
+            <button onclick="alert('Redirecting to Registration Page')">Register</button>
+            <button onclick="alert('Post Donor Information')">Post Donor Information</button>
+            <button onclick="alert('Viewing My Donor Info')">My Donor Info</button>
+            <button onclick="alert('Searching Donor Details')">Search Donor Details</button>
+            <button onclick="alert('Searching Blood Bank Details')">Search Blood Bank Details</button>
+            <button onclick="alert('Logging Out')">Logout</button>
+        </section>
+
+        <!-- Hospital Section -->
+        <section id="hospital">
+            <h2>Hospital Section</h2>
+            <button onclick="alert('Redirecting to Registration Page')">Register</button>
+            <button onclick="alert('Redirecting to Login Page')">Login</button>
+            <button onclick="alert('Posting Blood Bank Information')">Post Blood Bank Info</button>
+            <button onclick="alert('Updating Blood Group Status')">Update Blood Group Status</button>
+            <button onclick="alert('Viewing Blood Bank Details')">View Blood Bank Details</button>
+            <button onclick="alert('Logging Out')">Logout</button>
+        </section>
+    </main>
+</body>
+</html>
