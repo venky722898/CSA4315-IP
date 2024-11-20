@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlossomGifts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to BlossomGifts</h1>
+        <nav>
+            <ul id="categories">
+                <li>Flowers</li>
+                <li>Gift Baskets</li>
+                <li>Personalized Gifts</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="subcategories">
+            <h2>Subcategories</h2>
+            <ul id="subcat-list"></ul>
+        </section>
+
+        <section id="admin-panel">
+            <h2>Admin Panel</h2>
+            <div>
+                <label for="item-name">Item Name:</label>
+                <input type="text" id="item-name">
+            </div>
+            <div>
+                <label for="item-price">Price:</label>
+                <input type="number" id="item-price">
+            </div>
+            <button onclick="addItem()">Add Item</button>
+            <button onclick="removeItem()">Remove Item</button>
+            <button onclick="viewCustomers()">View Customers</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BlossomGifts. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
