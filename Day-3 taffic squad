@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Squad: Penalty Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traffic Squad: Penalty Collection & Management</h1>
+    </header>
+    <nav>
+        <a href="#user">User Section</a>
+        <a href="#police">Police Section</a>
+        <a href="#admin">Admin Section</a>
+    </nav>
+    <main>
+        <!-- User Section -->
+        <section id="user">
+            <h2>User Section</h2>
+            <button onclick="alert('Redirecting to User Registration Page')">Register</button>
+            <button onclick="alert('Redirecting to User Login Page')">Login</button>
+            <button onclick="alert('Viewing Challans')">View Challan</button>
+            <button onclick="alert('Viewing Filed Cases')">View Case Filed</button>
+        </section>
+
+        <!-- Police Section -->
+        <section id="police">
+            <h2>Police Section</h2>
+            <button onclick="alert('Redirecting to Police Login Page')">Login</button>
+            <button onclick="alert('Viewing Traffic Rules')">Rules</button>
+            <button onclick="alert('Creating a Case and Uploading Proof')">Create Case</button>
+            <button onclick="alert('Managing Live Information Updates')">Manage Live Reports</button>
+            <button onclick="alert('Opening Google Map Traffic Link')">Google Map Traffic</button>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2>Admin Section</h2>
+            <button onclick="alert('Managing Police Login Access')">Manage Police Login</button>
+            <button onclick="alert('Viewing Daily Traffic Reports')">View Daily Report</button>
+        </section>
+    </main>
+</body>
+</html>
