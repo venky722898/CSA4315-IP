@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Infotech - Laptop Sales & Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #777;
+        }
+        section {
+            padding: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ram Infotech</h1>
+        <p>Your Trusted Laptop Sales & Service Partner</p>
+    </header>
+
+    <nav>
+        <a href="#sales">Sales</a>
+        <a href="#services">Services</a>
+        <a href="#customer-info">Customer Info</a>
+        <a href="#rental">Rental</a>
+        <a href="#admin">Admin</a>
+    </nav>
+
+    <section id="sales">
+        <h2>Sales</h2>
+        <div class="card">
+            <h3>HP Pavilion 15</h3>
+            <p>Configuration: Intel i7, 16GB RAM, 512GB SSD</p>
+            <p>Price: $1200</p>
+        </div>
+        <div class="card">
+            <h3>Dell Inspiron 14</h3>
+            <p>Configuration: Intel i5, 8GB RAM, 256GB SSD</p>
+            <p>Price: $800</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>We offer repair, upgrade, and maintenance services for all laptop brands.</p>
+        <div class="card">
+            <h3>Screen Replacement</h3>
+            <p>Starts at $100</p>
+        </div>
+        <div class="card">
+            <h3>Battery Replacement</h3>
+            <p>Starts at $50</p>
+        </div>
+    </section>
+
+    <section id="customer-info">
+        <h2>Customer Information</h2>
+        <p>Track your purchases and service requests in your account.</p>
+    </section>
+
+    <section id="rental">
+        <h2>Laptop Rentals</h2>
+        <p>Rent laptops for personal or business needs. Flexible terms available.</p>
+    </section>
+
+    <section id="admin">
+        <h2>Admin Panel</h2>
+        <p><a href="admin-login.html">Admin Login</a></p>
+        <p><a href="admin-registration.html">Admin Registration</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ram Infotech. All rights reserved.</p>
+    </footer>
+</body>
+</html>
