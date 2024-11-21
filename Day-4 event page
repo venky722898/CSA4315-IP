@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .speakers {
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .speakers h2 {
+            text-align: center;
+            color: #333;
+        }
+        .speakers .speaker-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .speakers .speaker {
+            text-align: center;
+            margin: 10px;
+            width: 150px;
+        }
+        .speakers img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .about {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .about h2 {
+            color: #333;
+            text-align: center;
+        }
+        .schedule {
+            padding: 20px;
+            background-color: #eef;
+        }
+        .schedule h2 {
+            text-align: center;
+            color: #333;
+        }
+        .schedule ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .schedule li {
+            padding: 10px;
+            background: #fff;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .register {
+            text-align: center;
+            padding: 20px;
+            background-color: #0073e6;
+            color: white;
+        }
+        .register button {
+            background-color: #ffcc00;
+            border: none;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .register button:hover {
+            background-color: #e6b800;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech Innovation Summit 2024</h1>
+    </header>
+    
+    <section class="speakers">
+        <h2>Meet the Speakers</h2>
+        <div class="speaker-list">
+            <div class="speaker">
+                <img src="speaker1.jpg" alt="Speaker 1">
+                <p><a href="#">Dr. Jane Smith</a></p>
+            </div>
+            <div class="speaker">
+                <img src="speaker2.jpg" alt="Speaker 2">
+                <p><a href="#">Mr. John Doe</a></p>
+            </div>
+            <div class="speaker">
+                <img src="speaker3.jpg" alt="Speaker 3">
+                <p><a href="#">Ms. Emily Johnson</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <h2>About the Event</h2>
+        <p>The Tech Innovation Summit is a platform for industry leaders and aspiring innovators to explore the latest advancements in technology. Whether you're an entrepreneur, developer, or technology enthusiast, this event will provide valuable insights and networking opportunities.</p>
+    </section>
+    
+    <section class="schedule">
+        <h2>Event Schedule</h2>
+        <ul>
+            <li>10:00 AM - Opening Keynote by Dr. Jane Smith</li>
+            <li>11:30 AM - Panel Discussion: Future of AI</li>
+            <li>1:00 PM - Networking Lunch</li>
+            <li>2:30 PM - Workshop: Building Scalable Solutions</li>
+            <li>4:00 PM - Closing Remarks by Mr. John Doe</li>
+        </ul>
+    </section>
+    
+    <section class="register">
+        <h2>Register Now!</h2>
+        <button onclick="window.location.href='register.html'">Register Here</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Tech Innovation Summit. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
