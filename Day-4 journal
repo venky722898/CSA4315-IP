@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJSSE | International Journal of Scientific and Social Excellence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #0066cc;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-list li {
+            margin: 10px 0;
+        }
+        .menu-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .menu-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>International Journal of Scientific and Social Excellence (IJSSE)</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Journal</a>
+        <a href="#">Publication Ethics</a>
+        <a href="#">Editorial Board</a>
+        <a href="#">Reviewers</a>
+        <a href="#">Authors</a>
+        <a href="#">Articles</a>
+        <a href="#">Call for Papers</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <div class="container">
+        <h2>About the Journal</h2>
+        <p>
+            The International Journal of Scientific and Social Excellence (IJSSE) is a Scopus-indexed journal
+            with a mission to advance scientific and social research through transparent and efficient
+            academic publishing. The journal's print ISSN is <strong>2395-1443</strong> and online ISSN is <strong>2395-1451</strong>.
+        </p>
+        <h3>Key Features:</h3>
+        <ul class="menu-list">
+            <li><a href="#">For Authors</a> - Submit manuscripts, track submissions, and access author guidelines.</li>
+            <li><a href="#">For Reviewers</a> - Manage reviews and access reviewer resources.</li>
+            <li><a href="#">For Editors</a> - Coordinate reviews and manage submissions.</li>
+        </ul>
+        <h2>Explore:</h2>
+        <ul class="menu-list">
+            <li><a href="#">Current Issue</a></li>
+            <li><a href="#">Archives</a></li>
+            <li><a href="#">Most Cited Articles</a></li>
+            <li><a href="#">Publication Ethics</a></li>
+        </ul>
+        <h2>Call for Papers</h2>
+        <p>
+            We invite submissions from researchers across the globe. Click below to learn more:
+        </p>
+        <a class="btn" href="#" style="background-color: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Submit Your Manuscript</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 IJSSE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
