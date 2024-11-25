@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ko-Matha Dairy Farm</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#order-online">Order Online</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#admin-login">Admin Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Page Section -->
+<section id="home">
+    <h1>Welcome to Ko-Matha Dairy Farm</h1>
+    <p>Our farm is committed to providing the highest quality dairy products sourced from Indian A1 cows.</p>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="milk.jpg" alt="Fresh Milk">
+            <h2>Fresh A1 Cow Milk</h2>
+        </div>
+        <div class="carousel-item">
+            <img src="curd.jpg" alt="Curd">
+            <h2>Fresh Curd</h2>
+        </div>
+        <div class="carousel-item">
+            <img src="butter.jpg" alt="Butter">
+            <h2>Pure Butter</h2>
+        </div>
+        <!-- More carousel items as needed -->
+    </div>
+</section>
+
+<!-- About Us Page Section -->
+<section id="about-us">
+    <h2>About Ko-Matha Dairy Farm</h2>
+    <p>Ko-Matha Dairy Farm is dedicated to providing fresh and nutritious dairy products sourced from our healthy A1 cows. We use the latest technology to ensure the highest quality of milk and other products.</p>
+    <h3>Our Values</h3>
+    <ul>
+        <li>Fresh, high-quality products</li>
+        <li>Commitment to sustainability</li>
+        <li>Transparency and customer satisfaction</li>
+    </ul>
+</section>
+
+<!-- Products Page Section -->
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="product-list">
+        <div class="product">
+            <img src="milk-product.jpg" alt="Milk">
+            <h3>Fresh Milk</h3>
+            <p>Description: Pure A1 Cow Milk</p>
+            <p>Price: ₹50 per liter</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="curd-product.jpg" alt="Curd">
+            <h3>Fresh Curd</h3>
+            <p>Description: Homemade Curd from A1 Cow Milk</p>
+            <p>Price: ₹60 per kg</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Add more product items -->
+    </div>
+</section>
+
+<!-- Order Online Section -->
+<section id="order-online">
+    <h2>Order Online</h2>
+    <form action="submit_order.php" method="POST">
+        <label for="product">Select Product:</label>
+        <select id="product" name="product">
+            <option value="milk">Milk</option>
+            <option value="curd">Curd</option>
+            <option value="butter">Butter</option>
+            <!-- Add more products -->
+        </select><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="delivery-date">Preferred Delivery Date:</label>
+        <input type="date" id="delivery-date" name="delivery-date" required><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+
+<!-- Contact Us Page Section -->
+<section id="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, please feel free to reach out to us.</p>
+    <form action="submit_contact.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p>Phone: 1-800-123-4567</p>
+    <p>Email: support@komathadairy.com</p>
+    <p>Address: 123 Dairy Farm Road, Village, State</p>
+</section>
+
+<!-- Admin Login Section -->
+<section id="admin-login">
+    <h2>Admin Login</h2>
+    <form action="admin_login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<!-- Admin Dashboard Section -->
+<section id="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <ul>
+        <li><a href="#stock-management">Stock Management</a></li>
+        <li><a href="#customer-management">Customer Management</a></li>
+        <li><a href="#vendor-management">Vendor Management</a></li>
+    </ul>
+
+    <!-- Stock Management Section -->
+    <section id="stock-management">
+        <h3>Stock Management</h3>
+        <form action="stock_entry.php" method="POST">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required><br><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <button type="submit">Add Stock</button>
+        </form>
+
+        <h4>Reports</h4>
+        <ul>
+            <li><a href="daily_report.php">Daily Report</a></li>
+            <li><a href="monthly_report.php">Monthly Report</a></li>
+            <li><a href="yearly_report.php">Yearly Report</a></li>
+        </ul>
+    </section>
+
+    <!-- Customer Management Section -->
+    <section id="customer-management">
+        <h3>Customer Management</h3>
+        <p>Manage customer purchase details and orders here.</p>
+        <ul>
+            <li><a href="customer_purchase_detail.php">Customer Purchase Details</a></li>
+            <li><a href="online_purchase_order.php">Online Purchase Orders</a></li>
+        </ul>
+    </section>
+
+    <!-- Vendor Management Section -->
+    <section id="vendor-management">
+        <h3>Vendor Management</h3>
+        <form action="vendor_entry.php" method="POST">
+            <label for="vendor-name">Vendor Name:</label>
+            <input type="text" id="vendor-name" name="vendor-name" required><br><br>
+
+            <label for="contact">Contact Info:</label>
+            <input type="text" id="contact" name="contact" required><br><br>
+
+            <button type="submit">Add Vendor</button>
+        </form>
+
+        <h4>Cow Details</h4>
+        <form action="cow_entry.php" method="POST">
+            <label for="cow-id">Cow ID:</label>
+            <input type="text" id="cow-id" name="cow-id" required><br><br>
+
+            <label for="cow-name">Cow Name:</label>
+            <input type="text" id="cow-name" name="cow-name" required><br><br>
+
+            <label for="milk-yield">Milk Yield (L):</label>
+            <input type="number" id="milk-yield" name="milk-yield" required><br><br>
+
+            <button type="submit">Add Cow Details</button>
+        </form>
+    </section>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Ko-Matha Dairy Farm. All rights reserved.</p>
+    <ul>
+        <li><a href="#home">Home</a></li
