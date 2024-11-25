@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#vacancies">Vacancies</a></li>
+            <li><a href="#apply">Apply for Job</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Page Section -->
+<section id="home">
+    <h1>Welcome to Job Portal</h1>
+    <p>Your gateway to a world of job opportunities. Browse, apply, and land your dream job!</p>
+    <button><a href="#vacancies">Browse Vacancies</a></button>
+</section>
+
+<!-- Job Search Section -->
+<section id="vacancies">
+    <h2>Browse Vacancies</h2>
+    <form action="search_vacancy.php" method="GET">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location"><br><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="tech">Tech</option>
+            <option value="finance">Finance</option>
+            <option value="marketing">Marketing</option>
+            <!-- Add more categories as needed -->
+        </select><br><br>
+
+        <button type="submit">Search Jobs</button>
+    </form>
+
+    <!-- List of Vacancies -->
+    <h3>Available Vacancies</h3>
+    <div class="vacancy-list">
+        <div class="vacancy-item">
+            <h4>Software Developer</h4>
+            <p>Location: San Francisco</p>
+            <p>Category: Tech</p>
+            <button><a href="#apply">Apply Now</a></button>
+        </div>
+        <div class="vacancy-item">
+            <h4>Financial Analyst</h4>
+            <p>Location: New York</p>
+            <p>Category: Finance</p>
+            <button><a href="#apply">Apply Now</a></button>
+        </div>
+        <!-- Add more vacancy listings here -->
+    </div>
+</section>
+
+<!-- Apply for Job Section -->
+<section id="apply">
+    <h2>Apply for Job</h2>
+    <form action="apply_job.php" method="POST">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required><br><br>
+
+        <label for="privacy-level">Set Privacy Level:</label>
+        <select id="privacy-level" name="privacy-level">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+            <option value="restricted">Restricted</option>
+        </select><br><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+
+<!-- Login Section -->
+<section id="login">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<!-- Register Section -->
+<section id="register">
+    <h2>Register</h2>
+    <form action="register.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<!-- Admin Dashboard Section -->
+<section id="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+
+    <h3>Manage Directors</h3>
+    <form action="approve_director.php" method="POST">
+        <label for="director-id">Director ID:</label>
+        <input type="text" id="director-id" name="director-id" required><br><br>
+
+        <label for="approval-status">Approval Status:</label>
+        <select id="approval-status" name="approval-status">
+            <option value="approved">Approved</option>
+            <option value="pending">Pending</option>
+            <option value="rejected">Rejected</option>
+        </select><br><br>
+
+        <button type="submit">Update Status</button>
+    </form>
+
+    <h3>Post Vacancy</h3>
+    <form action="post_vacancy.php" method="POST" enctype="multipart/form-data">
+        <label for="vacancy-title">Vacancy Title:</label>
+        <input type="text" id="vacancy-title" name="vacancy-title" required><br><br>
+
+        <label for="vacancy-description">Description:</label>
+        <textarea id="vacancy-description" name="vacancy-description" rows="4" required></textarea><br><br>
+
+        <label for="vacancy-image">Upload Vacancy Image:</label>
+        <input type="file" id="vacancy-image" name="vacancy-image" required><br><br>
+
+        <label for="contact">Contact Information:</label>
+        <input type="text" id="contact" name="contact" required><br><br>
+
+        <button type="submit">Post Vacancy</button>
+    </form>
+
+    <h3>View Applications</h3>
+    <form action="view_applications.php" method="GET">
+        <label for="vacancy-id">Vacancy ID:</label>
+        <input type="text" id="vacancy-id" name="vacancy-id" required><br><br>
+
+        <button type="submit">View Applicants</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#vacancies">Vacancies</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#login">Login</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
