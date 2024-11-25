@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRide - Vehicle Rental</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Search Vehicles</a></li>
+            <li><a href="#bookings">My Bookings</a></li>
+            <li><a href="#profile">My Profile</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Page Section -->
+<section id="home">
+    <h1>Welcome to RentRide</h1>
+    <p>Your go-to platform for renting cars, trucks, and SUVs. Find the perfect vehicle for your needs.</p>
+    <button><a href="#search">Start Searching</a></button>
+</section>
+
+<!-- Search Vehicles Section -->
+<section id="search">
+    <h2>Search Vehicles</h2>
+    <form action="search_results.php" method="GET">
+        <label for="vehicle-type">Vehicle Type:</label>
+        <select id="vehicle-type" name="vehicle-type">
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+            <option value="suv">SUV</option>
+        </select><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="duration">Rental Duration (in days):</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<!-- Vehicle Listing Section -->
+<section id="vehicles">
+    <h2>Available Vehicles</h2>
+    <div class="vehicle">
+        <img src="vehicle1.jpg" alt="Car">
+        <h3>Car Model XYZ</h3>
+        <p>Price: $50/day</p>
+        <button><a href="#book-vehicle">Book Now</a></button>
+    </div>
+    <div class="vehicle">
+        <img src="vehicle2.jpg" alt="Truck">
+        <h3>Truck Model ABC</h3>
+        <p>Price: $100/day</p>
+        <button><a href="#book-vehicle">Book Now</a></button>
+    </div>
+    <!-- More vehicles can be listed here -->
+</section>
+
+<!-- Booking Section -->
+<section id="book-vehicle">
+    <h2>Book Vehicle</h2>
+    <form action="book_vehicle.php" method="POST">
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" name="customer-name" required><br><br>
+
+        <label for="customer-no">Customer No:</label>
+        <input type="text" id="customer-no" name="customer-no" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="vehicle-type">Vehicle Type:</label>
+        <input type="text" id="vehicle-type" name="vehicle-type" required><br><br>
+
+        <label for="rental-duration">Rental Duration:</label>
+        <input type="number" id="rental-duration" name="rental-duration" required><br><br>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+<!-- My Bookings Section -->
+<section id="bookings">
+    <h2>My Bookings</h2>
+    <p>View your past and current bookings here.</p>
+    <div class="booking">
+        <h3>Booking #12345</h3>
+        <p>Vehicle: Car Model XYZ</p>
+        <p>Status: Confirmed</p>
+        <p>Pickup Date: 2024-12-01</p>
+    </div>
+    <div class="booking">
+        <h3>Booking #12346</h3>
+        <p>Vehicle: Truck Model ABC</p>
+        <p>Status: Pending</p>
+        <p>Pickup Date: 2024-12-05</p>
+    </div>
+    <!-- More bookings can be listed here -->
+</section>
+
+<!-- User Profile Section -->
+<section id="profile">
+    <h2>My Profile</h2>
+    <form action="update_profile.php" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <button type="submit">Update Profile</button>
+    </form>
+</section>
+
+<!-- Admin Section: Add Vehicle, Manage Bookings -->
+<section id="admin">
+    <h2>Admin Dashboard</h2>
+    <h3>Manage Vehicles</h3>
+    <form action="add_vehicle.php" method="POST">
+        <label for="vehicle-name">Vehicle Name:</label>
+        <input type="text" id="vehicle-name" name="vehicle-name" required><br><br>
+
+        <label for="vehicle-price">Price per Day:</label>
+        <input type="number" id="vehicle-price" name="vehicle-price" required><br><br>
+
+        <label for="vehicle-type">Vehicle Type:</label>
+        <select id="vehicle-type" name="vehicle-type">
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+            <option value="suv">SUV</option>
+        </select><br><br>
+
+        <button type="submit">Add Vehicle</button>
+    </form>
+
+    <h3>Manage Bookings</h3>
+    <form action="approve_booking.php" method="POST">
+        <label for="booking-id">Booking ID:</label>
+        <input type="text" id="booking-id" name="booking-id" required><br><br>
+
+        <label for="booking-status">Booking Status:</label>
+        <select id="booking-status" name="booking-status">
+            <option value="approved">Approved</option>
+            <option value="pending">Pending</option>
+            <option value="canceled">Canceled</option>
+        </select><br><br>
+
+        <button type="submit">Update Booking Status</button>
+    </form>
+</section>
+
+<!-- Login Section -->
+<section id="login">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<!-- Register Section -->
+<section id="register">
+    <h2>Register</h2>
+    <form action="register.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="contact_form.php" method="POST">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="contact-name" required><br><br>
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="contact-email" required><br><br>
+
+        <label for="contact-message">Message:</label><br>
+        <textarea id="contact-message" name="contact-message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 RentRide. All rights reserved.</p>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#search">Search Vehicles</a></li>
+        <li><a href="#bookings">My Bookings</a></li>
+        <li><a href="#profile">My Profile</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
