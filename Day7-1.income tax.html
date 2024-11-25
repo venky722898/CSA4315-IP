@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <section id="login-section">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <label for="login-method">Login via:</label><br>
+            <button type="button" onclick="loginWithGoogle()">Login with Google</button><br>
+            <button type="button" onclick="loginWithFacebook()">Login with Facebook</button>
+        </form>
+    </section>
+
+    <!-- Employee Tax Calculation Section -->
+    <section id="tax-calculation-section" style="display:none;">
+        <h2>Income Tax Calculation</h2>
+        <form id="tax-form" method="POST" action="calculate_tax.php">
+            <!-- Personal Information -->
+            <label for="salary">Annual Salary:</label>
+            <input type="number" id="salary" name="salary" required><br>
+
+            <label for="bonus">Bonus Income:</label>
+            <input type="number" id="bonus" name="bonus"><br>
+
+            <label for="other-income">Other Taxable Income:</label>
+            <input type="number" id="other-income" name="other-income"><br>
+
+            <label for="hra">House Rent Allowance (HRA):</label>
+            <input type="number" id="hra" name="hra" required><br>
+
+            <label for="pension">Pension Contribution:</label>
+            <input type="number" id="pension" name="pension"><br>
+
+            <label for="health-insurance">Health Insurance Premium:</label>
+            <input type="number" id="health-insurance" name="health-insurance"><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Calculate Tax</button>
+        </form>
+    </section>
+
+    <!-- Tax Calculation Result Section -->
+    <section id="tax-result-section" style="display:none;">
+        <h2>Tax Calculation Results</h2>
+        <p><strong>Total Tax Liability:</strong> ₹<span id="total-tax"></span></p>
+        <p><strong>Net Income After Tax:</strong> ₹<span id="net-income"></span></p>
+        <p><strong>Tax Saving Tips:</strong></p>
+        <ul id="tax-saving-tips">
+            <li>Contribute more to your pension fund for additional deductions.</li>
+            <li>Consider increasing your health insurance premiums for better tax benefits.</li>
+            <li>Claim HRA if you live in a rented accommodation.</li>
+        </ul>
+        <button onclick="downloadSummary()">Download Summary</button>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin-section" style="display:none;">
+        <h2>Admin Panel</h2>
+        <form action="admin_dashboard.php" method="POST">
+            <label for="admin-login">Admin Login:</label><br>
+            <input type="text" id="admin-username" name="username" placeholder="Username" required><br>
+            <input type="password" id="admin-password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <h3>Modify Tax Norms</h3>
+        <form id="admin-tax-norms">
+            <label for="standard-deduction">Standard Deduction (₹):</label>
+            <input type="number" id="standard-deduction" value="50000"><br>
+
+            <label for="pension-max-deduction">Maximum Pension Deduction (₹):</label>
+            <input type="number" id="pension-max-deduction" value="150000"><br>
+
+            <label for="tax-slab-1">Tax Slab 1 (₹250,000):</label>
+            <input type="number" id="tax-slab-1" value="0"><br>
+
+            <label for="tax-slab-2">Tax Slab 2 (₹500,000):</label>
+            <input type="number" id="tax-slab-2" value="5"><br>
+
+            <label for="tax-slab-3">Tax Slab 3 (₹1,000,000):</label>
+            <input type="number" id="tax-slab-3" value="20"><br>
+
+            <label for="tax-slab-4">Tax Slab 4 (> ₹1,000,000):</label>
+            <input type="number" id="tax-slab-4" value="30"><br>
+
+            <button type="submit">Update Norms</button>
+        </form>
+    </section>
+
+    <!-- JavaScript to handle login and form submission -->
+    <script>
+        function loginWithGoogle() {
+            // Google login logic
+            alert("Logged in with Google");
+            document.getElementById("login-section").style.display = "none";
+            document.getElementById("tax-calculation-section").style.display = "block";
+        }
+
+        function loginWithFacebook() {
+            // Facebook login logic
+            alert("Logged in with Facebook");
+            document.getElementById("login-section").style.display = "none";
+            document.getElementById("tax-calculation-section").style.display = "block";
+        }
+
+        function downloadSummary() {
+            // Logic for downloading summary
+            alert("Summary downloaded!");
+        }
+
+        document.getElementById("tax-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            // Sample tax calculation logic based on entered data
+            let salary = parseFloat(document.getElementById("salary").value);
+            let bonus = parseFloat(document.getElementById("bonus").value) || 0;
+            let otherIncome = parseFloat(document.getElementById("other-income").value) || 0;
+            let hra = parseFloat(document.getElementById("hra").value);
+            let pension = parseFloat(document.getElementById("pension").value) || 0;
+            let healthInsurance = parseFloat(document.getElementById("health-insurance").value) || 0;
+
+            let netTaxableIncome = (salary + bonus + otherIncome) - (hra + 50000 + pension + healthInsurance);
+
+            // Simple tax calculation logic
+            let tax = 0;
+            if (netTaxableIncome > 1000000) {
+                tax = 112500 + 0.30 * (netTaxableIncome - 1000000);
+            } else if (netTaxableIncome > 500000) {
+                tax = 12500 + 0.20 * (netTaxableIncome - 500000);
+            } else if (netTaxableIncome > 250000) {
+                tax = 0.05 * (netTaxableIncome - 250000);
+            }
+
+            let netIncome = netTaxableIncome - tax;
+
+            // Display results
+            document.getElementById("total-tax").innerText = tax.toFixed(2);
+            document.getElementById("net-income").innerText = netIncome.toFixed(2);
+
+            // Show result section
+            document.getElementById("tax-calculation-section").style.display = "none";
+            document.getElementById("tax-result-section").style.display = "block";
+        });
+    </script>
+</body>
+</html>
