@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Page Section -->
+<section id="home">
+    <h1>Welcome to BookHaven</h1>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="bestsellers.jpg" alt="Bestsellers">
+            <h2>Bestsellers</h2>
+        </div>
+        <div class="carousel-item">
+            <img src="new-arrivals.jpg" alt="New Arrivals">
+            <h2>New Arrivals</h2>
+        </div>
+        <!-- Add more carousel items as needed -->
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for books, authors, genres..." id="search">
+        <button>Search</button>
+    </div>
+    <div class="categories">
+        <h3>Explore Categories</h3>
+        <ul>
+            <li><a href="#fiction">Fiction</a></li>
+            <li><a href="#non-fiction">Non-Fiction</a></li>
+            <li><a href="#academic">Academic</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us">
+    <h2>About BookHaven</h2>
+    <p>Welcome to BookHaven, your online destination for books of all genres. Our mission is to provide a wide variety of books with exceptional customer service. Whether you're a bookworm or a casual reader, BookHaven offers books that fit your taste.</p>
+    <p>We are committed to delivering quality reading experiences, offering competitive prices, and ensuring customer satisfaction.</p>
+    <h3>Meet the Team</h3>
+    <p>Our team consists of passionate book lovers and professionals dedicated to providing you with the best shopping experience.</p>
+</section>
+
+<!-- Catalog Page Section -->
+<section id="catalog">
+    <h2>Catalog</h2>
+    <div class="filters">
+        <h3>Filter by:</h3>
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="academic">Academic</option>
+        </select>
+        <label for="author">Author:</label>
+        <input type="text" id="author" placeholder="Search by author">
+        <label for="price-range">Price Range:</label>
+        <input type="text" id="price-range" placeholder="Enter price range">
+    </div>
+    
+    <div class="book-listing">
+        <div class="book">
+            <img src="book1.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>by Author Name</p>
+            <p>Price: $20.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>by Author Name</p>
+            <p>Price: $15.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Add more book items -->
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, please reach out to us.</p>
+    <form action="submit_contact.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <p>Phone: 1-800-123-4567</p>
+    <p>Email: support@bookhaven.com</p>
+    <p>Address: 123 Book St, Book City, BC</p>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>How do I place an order?</h3>
+        <p>To place an order, browse our catalog, select the book you want, and click "Add to Cart." Then, proceed to checkout to complete the purchase.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What payment methods are accepted?</h3>
+        <p>We accept credit/debit cards, PayPal, and other secure payment methods.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How can I track my order?</h3>
+        <p>You will receive an email with tracking details once your order has shipped.</p>
+    </div>
+    <!-- Add more FAQ items -->
+</section>
+
+<!-- Privacy Policy Section -->
+<section id="privacy-policy">
+    <h2>Privacy Policy</h2>
+    <p>Your privacy is important to us. BookHaven collects your personal information only for processing orders and providing customer service. We do not share your data with third parties unless required by law. For more information, read our detailed privacy policy.</p>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 BookHaven. All rights reserved.</p>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+    </ul>
+</footer>
+
+<script src="scripts.js"></script> <!-- External JS -->
+</body>
+</html>
