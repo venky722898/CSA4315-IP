@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            margin-top: 20px;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LearnWell Tuition Centre Management</h1>
+
+        <!-- Admin Section -->
+        <div class="form-section">
+            <h2>Admin Details</h2>
+            <form action="/admin/save" method="POST">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" name="admin_username" required placeholder="Enter username">
+
+                <label for="admin-email">Email:</label>
+                <input type="email" id="admin-email" name="admin_email" required placeholder="Enter email">
+
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin_password" required placeholder="Enter password">
+
+                <button type="submit">Save Admin Details</button>
+            </form>
+        </div>
+
+        <!-- Teacher Section -->
+        <div class="form-section">
+            <h2>Teacher Details</h2>
+            <form action="/teacher/save" method="POST">
+                <label for="teacher-name">Name:</label>
+                <input type="text" id="teacher-name" name="teacher_name" required placeholder="Enter teacher name">
+
+                <label for="teacher-email">Email:</label>
+                <input type="email" id="teacher-email" name="teacher_email" required placeholder="Enter teacher email">
+
+                <label for="teacher-password">Password:</label>
+                <input type="password" id="teacher-password" name="teacher_password" required placeholder="Enter password">
+
+                <button type="submit">Save Teacher Details</button>
+            </form>
+        </div>
+
+        <!-- Student Section -->
+        <div class="form-section">
+            <h2>Student Details</h2>
+            <form action="/student/save" method="POST">
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student_name" required placeholder="Enter student name">
+
+                <label for="student-fees">Fees Paid:</label>
+                <input type="number" id="student-fees" name="student_fees" required placeholder="Enter fees paid">
+
+                <label for="student-report">Monthly/Yearly Report:</label>
+                <textarea id="student-report" name="student_report" rows="3" placeholder="Enter performance report"></textarea>
+
+                <label for="student-feedback">Feedback:</label>
+                <textarea id="student-feedback" name="student_feedback" rows="3" placeholder="Enter feedback"></textarea>
+
+                <button type="submit">Save Student Details</button>
+            </form>
+        </div>
+
+        <!-- Subject Section -->
+        <div class="form-section">
+            <h2>Subject Details</h2>
+            <form action="/subject/save" method="POST">
+                <label for="subject-name">Subject Name:</label>
+                <input type="text" id="subject-name" name="subject_name" required placeholder="Enter subject name">
+
+                <label for="subject-duration">Duration:</label>
+                <input type="text" id="subject-duration" name="subject_duration" required placeholder="Enter duration (e.g., 3 months)">
+
+                <label for="subject-fees">Fees:</label>
+                <input type="number" id="subject-fees" name="subject_fees" required placeholder="Enter fees">
+
+                <button type="submit">Save Subject Details</button>
+            </form>
+        </div>
+
+        <!-- Tuition Mode Section -->
+        <div class="form-section">
+            <h2>Tuition Mode</h2>
+            <form action="/tuition/save" method="POST">
+                <label for="tuition-mode">Mode:</label>
+                <select id="tuition-mode" name="tuition_mode" required>
+                    <option value="" disabled selected>Select Mode</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
+
+                <button type="submit">Save Tuition Mode</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
