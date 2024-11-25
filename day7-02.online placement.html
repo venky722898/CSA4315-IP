@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Placement Examination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Admin Login Section -->
+    <section id="admin-login-section">
+        <h2>Admin Login</h2>
+        <form action="admin_login.php" method="POST">
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" name="username" required><br>
+
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Candidate Login Section -->
+    <section id="candidate-login-section" style="display:none;">
+        <h2>Candidate Login</h2>
+        <form action="candidate_login.php" method="POST">
+            <label for="candidate-username">Username:</label>
+            <input type="text" id="candidate-username" name="username" required><br>
+
+            <label for="candidate-password">Password:</label>
+            <input type="password" id="candidate-password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Admin Dashboard (After Login) -->
+    <section id="admin-dashboard" style="display:none;">
+        <h2>Admin Dashboard</h2>
+        <h3>Schedule Exam</h3>
+        <form action="schedule_exam.php" method="POST">
+            <label for="exam-date">Exam Date and Time:</label>
+            <input type="datetime-local" id="exam-date" name="exam_date" required><br>
+
+            <label for="question-file">Upload Question Paper:</label>
+            <input type="file" id="question-file" name="question_file" required><br>
+
+            <button type="submit">Schedule Exam</button>
+        </form>
+
+        <h3>Publish Results</h3>
+        <form action="publish_results.php" method="POST">
+            <label for="exam-id">Select Exam:</label>
+            <select id="exam-id" name="exam_id">
+                <!-- Populate exam list from database -->
+                <option value="1">Placement Exam 1</option>
+                <option value="2">Placement Exam 2</option>
+            </select><br>
+
+            <button type="submit">Publish Results</button>
+        </form>
+    </section>
+
+    <!-- Candidate Exam Section -->
+    <section id="exam-section" style="display:none;">
+        <h2>Placement Exam</h2>
+        <p>Start your exam at the scheduled time.</p>
+        <form id="exam-form" action="submit_exam.php" method="POST">
+            <!-- Sample Questions (Add more questions dynamically) -->
+            <label for="q1">Question 1: What is 2 + 2?</label><br>
+            <input type="radio" id="q1a1" name="q1" value="3"> 3<br>
+            <input type="radio" id="q1a2" name="q1" value="4"> 4<br>
+            <input type="radio" id="q1a3" name="q1" value="5"> 5<br>
+
+            <label for="q2">Question 2: What is the capital of France?</label><br>
+            <input type="radio" id="q2a1" name="q2" value="Berlin"> Berlin<br>
+            <input type="radio" id="q2a2" name="q2" value="Paris"> Paris<br>
+            <input type="radio" id="q2a3" name="q2" value="Madrid"> Madrid<br>
+
+            <button type="submit">Submit Exam</button>
+        </form>
+    </section>
+
+    <!-- Candidate Result Section -->
+    <section id="result-section" style="display:none;">
+        <h2>Result</h2>
+        <p><strong>Score:</strong> <span id="score"></span></p>
+        <p><strong>Ranking:</strong> <span id="ranking"></span></p>
+
+        <h3>Feedback</h3>
+        <p>Your performance in the exam has been evaluated. Here's your feedback:</p>
+        <ul>
+            <li>Question 1: Correct Answer</li>
+            <li>Question 2: Incorrect Answer</li>
+        </ul>
+
+        <button onclick="downloadScorecard()">Download Scorecard</button>
+        <button onclick="applyForReEvaluation()">Apply for Re-evaluation</button>
+    </section>
+
+    <script>
+        function downloadScorecard() {
+            alert("Scorecard downloaded!");
+        }
+
+        function applyForReEvaluation() {
+            alert("Re-evaluation request submitted.");
+        }
+
+        // Sample Logic to Show Admin or Candidate Section Based on Login
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            // Sample login logic (This can be connected to actual authentication logic)
+            let username = document.getElementById("admin-username").value || document.getElementById("candidate-username").value;
+            
+            if (username === "admin") {
+                document.getElementById("admin-login-section").style.display = "none";
+                document.getElementById("admin-dashboard").style.display = "block";
+            } else {
+                document.getElementById("candidate-login-section").style.display = "none";
+                document.getElementById("exam-section").style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>
