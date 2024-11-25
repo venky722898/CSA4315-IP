@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Haven - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#offers">Special Offers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Homepage Section -->
+    <section id="home" class="hero-section">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="restaurant-interior.jpg" alt="Restaurant Interior">
+            </div>
+            <div class="carousel-slide">
+                <img src="signature-dish1.jpg" alt="Signature Dish 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="signature-dish2.jpg" alt="Signature Dish 2">
+            </div>
+        </div>
+        <div class="welcome-message">
+            <h1>Welcome to Gourmet Haven</h1>
+            <p>Indulge in an extraordinary culinary journey.</p>
+        </div>
+    </section>
+
+    <!-- Menu Page -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-category">
+            <h3>Appetizers</h3>
+            <div class="menu-item">
+                <img src="appetizer1.jpg" alt="Appetizer 1">
+                <h4>Bruschetta</h4>
+                <p>Fresh tomatoes, basil, and mozzarella on toasted bread.</p>
+                <p class="price">$8.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="appetizer2.jpg" alt="Appetizer 2">
+                <h4>Calamari</h4>
+                <p>Crispy fried squid served with marinara sauce.</p>
+                <p class="price">$12.99</p>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Main Courses</h3>
+            <div class="menu-item">
+                <img src="main-course1.jpg" alt="Main Course 1">
+                <h4>Grilled Salmon</h4>
+                <p>Served with asparagus and roasted potatoes.</p>
+                <p class="price">$24.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="main-course2.jpg" alt="Main Course 2">
+                <h4>Filet Mignon</h4>
+                <p>Tender beef served with a red wine reduction sauce.</p>
+                <p class="price">$35.99</p>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Desserts</h3>
+            <div class="menu-item">
+                <img src="dessert1.jpg" alt="Dessert 1">
+                <h4>Tiramisu</h4>
+                <p>Classic Italian dessert with mascarpone and espresso-soaked cake.</p>
+                <p class="price">$6.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="dessert2.jpg" alt="Dessert 2">
+                <h4>Chocolate Lava Cake</h4>
+                <p>Warm cake with a gooey chocolate center, served with vanilla ice cream.</p>
+                <p class="price">$8.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Gourmet Haven offers a fine dining experience like no other. Our culinary team, led by Chef John Doe, creates unforgettable dishes using the finest ingredients from around the world.</p>
+        <img src="chef.jpg" alt="Chef John Doe">
+        <p>Our mission is to provide exceptional food, exceptional service, and an ambiance that makes every meal memorable.</p>
+    </section>
+
+    <!-- Reservation Page -->
+    <section id="reservation">
+        <h2>Make a Reservation</h2>
+        <form action="submit_reservation.php" method="POST">
+            <label for="reservation-name">Name:</label>
+            <input type="text" id="reservation-name" name="name" required><br>
+
+            <label for="reservation-date">Date:</label>
+            <input type="date" id="reservation-date" name="date" required><br>
+
+            <label for="reservation-time">Time:</label>
+            <input type="time" id="reservation-time" name="time" required><br>
+
+            <label for="reservation-guests">Number of Guests:</label>
+            <input type="number" id="reservation-guests" name="guests" required><br>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Visit us at:</p>
+        <address>
+            123 Gourmet St.<br>
+            Fine Dining City, 56789<br>
+            Phone: (123) 456-7890<br>
+            Email: contact@gourmethaven.com
+        </address>
+
+        <h3>Find Us</h3>
+        <div id="map"></div> <!-- Embed Google Map Widget Here -->
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers">
+        <h2>Special Offers & Events</h2>
+        <div class="offer">
+            <h3>Happy Hour</h3>
+            <p>Enjoy 20% off on all drinks from 5:00 PM to 7:00 PM, Monday to Friday.</p>
+        </div>
+        <div class="offer">
+            <h3>Seasonal Tasting Menu</h3>
+            <p>Try our exclusive tasting menu, available only this month for $59.99 per person.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial">
+            <p>"The food was absolutely amazing! The atmosphere was perfect for a romantic dinner." - Emily R.</p>
+        </div>
+        <div class="testimonial">
+            <p>"A dining experience that exceeds all expectations. We'll definitely be back!" - James L.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS or Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
