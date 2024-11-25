@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Electricity Bill Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .login-form, .register-form, .payment-form {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #575757;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Online Electricity Bill Payment</h1>
+        <p>Your one-stop platform for managing electricity bills</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Admin Login</a>
+        <a href="#">Customer Login</a>
+    </nav>
+
+    <!-- Customer Registration Form -->
+    <div class="container">
+        <h2>Customer Registration</h2>
+        <form class="register-form">
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerEmail">Email:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+
+            <label for="customerPassword">Password:</label>
+            <input type="password" id="customerPassword" name="customerPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Customer Login Form -->
+    <div class="container">
+        <h2>Customer Login</h2>
+        <form class="login-form">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Admin Login Form -->
+    <div class="container">
+        <h2>Admin Login</h2>
+        <form class="login-form">
+            <label for="adminEmail">Email:</label>
+            <input type="email" id="adminEmail" name="adminEmail" required>
+
+            <label for="adminPassword">Password:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Admin Update Bill Calculation -->
+    <div class="container">
+        <h2>Update Bill Calculation Formula</h2>
+        <form class="admin-update-form">
+            <label for="connectionType">Connection Type:</label>
+            <select id="connectionType" name="connectionType">
+                <option value="domestic">Domestic</option>
+                <option value="commercial">Commercial</option>
+            </select>
+
+            <label for="unitsConsumed">Units Consumed:</label>
+            <input type="number" id="unitsConsumed" name="unitsConsumed" required>
+
+            <button type="submit">Calculate Bill</button>
+        </form>
+    </div>
+
+    <!-- Payment Form for Customer -->
+    <div class="container">
+        <h2>Bill Payment</h2>
+        <form class="payment-form">
+            <label for="billAmount">Bill Amount (in Rs.):</label>
+            <input type="number" id="billAmount" name="billAmount" required readonly>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="netBanking">Net Banking</option>
+                <option value="digitalWallet">Digital Wallet</option>
+            </select>
+
+            <button type="submit">Pay Bill</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Electricity Bill Payment. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
