@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Recipe Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .recipe-card {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .recipe-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .search-bar {
+            margin: 20px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .ingredients-list, .instructions {
+            margin-top: 20px;
+        }
+        .ingredients-list ul, .instructions ol {
+            font-size: 16px;
+        }
+        .meal-planner, .shopping-list {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .comments-section {
+            margin-top: 20px;
+        }
+        .comments-section textarea, .comments-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .comments-section button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Digital Recipe Book</h1>
+        <p>Your online culinary adventure starts here!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Breakfast</a>
+        <a href="#">Main Course</a>
+        <a href="#">Desserts</a>
+        <a href="#">Vegetarian</a>
+        <a href="#">My Account</a>
+        <a href="#">Meal Planner</a>
+        <a href="#">Shopping List</a>
+    </nav>
+
+    <!-- Homepage Search Bar -->
+    <div class="container">
+        <input class="search-bar" type="text" placeholder="Search recipes by name, ingredient, or cuisine...">
+    </div>
+
+    <!-- Recipe Listings -->
+    <div class="container">
+        <h2>Featured Recipes</h2>
+
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/800x400" alt="Recipe Image">
+            <h2>Classic Pancakes</h2>
+            <p>Enjoy fluffy, golden pancakes perfect for breakfast. This recipe includes simple ingredients and step-by-step instructions.</p>
+            <a href="#">View Recipe</a>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/800x400" alt="Recipe Image">
+            <h2>Vegetarian Stir Fry</h2>
+            <p>A colorful and healthy vegetarian stir fry with seasonal vegetables, served with steamed rice.</p>
+            <a href="#">View Recipe</a>
+        </div>
+    </div>
+
+    <!-- Recipe Page -->
+    <div class="container">
+        <h2>Classic Pancakes</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Recipe Image">
+        
+        <!-- Ingredients List -->
+        <div class="ingredients-list">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 cup all-purpose flour</li>
+                <li>2 tablespoons sugar</li>
+                <li>1 tablespoon baking powder</li>
+                <li>1 egg</li>
+                <li>1 cup milk</li>
+                <li>2 tablespoons butter, melted</li>
+                <li>1 teaspoon vanilla extract</li>
+            </ul>
+        </div>
+
+        <!-- Cooking Instructions -->
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li>In a large bowl, whisk together the flour, sugar, and baking powder.</li>
+                <li>In a separate bowl, beat the egg, then add the milk, melted butter, and vanilla extract.</li>
+                <li>Combine the wet and dry ingredients and stir until just combined.</li>
+                <li>Heat a non-stick pan over medium heat and pour 1/4 cup of batter onto the pan for each pancake.</li>
+                <li>Cook until bubbles form on the surface, then flip and cook for another 2-3 minutes.</li>
+            </ol>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h3>Leave a Comment</h3>
+            <textarea placeholder="Share your thoughts on this recipe..."></textarea>
+            <button type="submit">Post Comment</button>
+        </div>
+    </div>
+
+    <!-- Meal Planner and Shopping List -->
+    <div class="container">
+        <div class="meal-planner">
+            <h3>Weekly Meal Planner</h3>
+            <p>Organize your meals for the week with ease.</p>
+            <!-- Meal planner tool content goes here -->
+        </div>
+
+        <div class="shopping-list">
+            <h3>Shopping List</h3>
+            <p>Generate a shopping list based on your selected recipes.</p>
+            <!-- Shopping list content goes here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Digital Recipe Book. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
